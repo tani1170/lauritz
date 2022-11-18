@@ -5,3 +5,13 @@ body {
 h2 {
   color: white;
 }
+
+/* Global CSS */
+
+:root {
+/* options */
+--gren-400: #7b7b7b
+
+/* aliases */
+--primary-card-bg: var(--gren-400)
+}
