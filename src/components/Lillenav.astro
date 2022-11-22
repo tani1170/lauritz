@@ -1,0 +1,50 @@
+---
+import "../styles/style.css";
+---
+
+<div>
+  <img
+    src="public/img/lauritz-logo.svg"
+    alt=""
+  />
+
+  <ul class="undernav">
+    <li>
+      <a class="undernav" href=""
+        >Bliv bruger</a
+      >
+    </li>
+    <li><a href="">Log ind</a></li>
+    <li><a href="">Hjælp</a></li>
+  </ul>
+</div>
+
+<hr />
+
+<style>
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul {
+    display: flex;
+    gap: 25px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+  hr {
+    border-width: 1px;
+    border-color: var(--color-filter);
+  }
+
+  img {
+    width: 20%;
+  }
+</style>

@@ -1,8 +1,17 @@
 ---
-const { titel, beskrivelse, img, deluxe, variant } = Astro.props;
+const {
+  titel,
+  beskrivelse,
+  img,
+  deluxe,
+  variant,
+} = Astro.props;
 ---
 
-<article class={deluxe == true && "Deluxe"} data-variant={variant}>
+<article
+  class={deluxe == true && "Deluxe"}
+  data-variant={variant}
+>
   <h2>{titel}</h2>
   <p>
     {beskrivelse}

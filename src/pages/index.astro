@@ -1,31 +1,23 @@
 ---
-import Card from "../components/Card.astro";
-import Button from "../components/Card.astro";
-import "../styles/global.css";
+import Header from "../components/Header.astro";
+import "../styles/style.css";
 ---
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Lauritz</title>
   </head>
-  <body>
-    <h1>Astro</h1>
-    <h3>Hallo</h3>
-    <Card
-      deluxe={true}
-      titel="Vare nr. 1"
-      beskrivelse="denne vare er meget dyr"
-      variant="primary"
-    />
-    <Card
-      deluxe={false}
-      titel="Vare nr. 2"
-      beskrivelse=" denne bare er også meget dyr"
-      variant="secondary"
-    />
+  <body class="body">
+    <Header />
   </body>
 </html>

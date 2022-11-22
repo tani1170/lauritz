@@ -1,0 +1,238 @@
+:root {
+  /* Colors */
+  --color-filter-scale: #6d6b6b;
+  --color-filter-text: #909090;
+  --color-check-box: #0330ce;
+  --color-background-body: #ededed;
+  --color-card-background: #0000;
+  --color-header-background: #f8f8f8;
+  --color-varetype1: #d8c9f0;
+  --color-varetype2: #f0ecc9;
+  --color-light-green: #18a85c;
+  --color-dark-green: #13663a;
+  --color-dark-red: #9f2020;
+  --color-dark-grey: #3d3d3d;
+
+  /* radius */
+  --radius-round: 100%;
+  --radius-medium: 5px;
+
+  /* shadow */
+  --shadow-level-1: 0px 4px 4px
+    rgba(0, 0, 0, 0.25);
+
+  /* Font */
+  --font-family-body: "Poppins",
+    sans-serif;
+
+  /* Font sizes */
+  --font-size-footer: 16px;
+  --font-size-navigation: 25px;
+  --font-size-h1: 35px;
+  --font-size-neaste-bud: 25px;
+  --font-size-card-title: 20px;
+  --font-size-card-time: 16px;
+  --font-size-card-location: 12px;
+  --font-size-vurderings-pris: 12px;
+  --font-size-filter-number: 12px;
+  --font-size-body: 16px;
+  --font-size-pris-titel: 10px;
+  --font-size-card-status: 10px;
+
+  /* Font weight  */
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+
+  /* Aliasser */
+  --color-header: var(
+    --color-header-background
+  );
+  --color-nyproduceret: var(
+    --color-varetype2
+  );
+  --color-deluxe: var(
+    --color-varetype1
+  );
+  --color-lead: var(
+    --color-light-green
+  );
+  --color-losing: var(--color-dark-red);
+  --color-status-timer: var(
+    --color-dark-red
+  );
+  --color-buynow: var(
+    --color-dark-green
+  );
+  --color-label-text: var(
+    --color-dark-grey
+  );
+
+  --color-scale: var(
+    --color-filter-scale
+  );
+  --color-filter: var(
+    --color-filter-text
+  );
+  --color-check: var(--color-check-box);
+  --color-body: var(
+    --color-background-body
+  );
+  --color-card: var(
+    --color-card-background
+  );
+}
+
+.neastebud {
+  font-size: var(
+    --font-size-neaste-bud
+  );
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-body);
+}
+
+.cardtitle {
+  font-size: var(
+    --font-size-card-title
+  );
+  font-weight: var(
+    --font-weight-semibold
+  );
+  font-family: var(--font-family-body);
+}
+
+.cardtime {
+  font-size: var(--font-size-card-time);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-body);
+}
+
+.body {
+  font-size: var(--font-size-body);
+  font-weight: var(
+    --font-weight-regular
+  );
+  font-family: var(--font-family-body);
+}
+
+.filterno {
+  font-size: var(
+    --font-size-filter-number
+  );
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-body);
+}
+
+.buynow {
+  font-size: var(
+    --font-size-filter-number
+  );
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-body);
+}
+
+.vurdering {
+  font-size: var(
+    --font-size-vurderings-pris
+  );
+  font-weight: var(
+    --font-weight-medium
+  );
+  font-family: var(--font-family-body);
+}
+
+.location {
+  font-size: var(
+    --font-size-card-location
+  );
+  font-weight: var(
+    --font-weight-regular
+  );
+  font-family: var(--font-family-body);
+}
+
+.varetype {
+  font-size: var(
+    --font-size-card-location
+  );
+  font-weight: var(
+    --font-weight-regular
+  );
+  font-family: var(--font-family-body);
+}
+
+.buynowprice {
+  font-size: var(
+    --font-size-card-location
+  );
+  font-weight: var(
+    --font-weight-regular
+  );
+  font-family: var(--font-family-body);
+}
+
+.cardstatus {
+  font-size: var(
+    --font-size-card-status
+  );
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-body);
+}
+
+.pricetitle {
+  font-size: var(
+    --font-size-pris-titel
+  );
+  font-weight: var(
+    --font-weight-regular
+  );
+  font-family: var(--font-family-body);
+}
+
+.navigation {
+  font-size: var(
+    --font-size-navigation
+  );
+  font-weight: var(
+    --font-weight-semibold
+  );
+  font-family: var(--font-family-body);
+  color: #909090;
+  list-style-type: none;
+}
+
+.footer {
+  font-size: var(--font-size-footer);
+  font-weight: var(
+    --font-weight-semibold
+  );
+  font-family: var(--font-family-body);
+}
+
+.overskrift {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-body);
+}
+
+.highlight {
+  font-size: var(--font-size-footer);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-body);
+}
+
+.undernav {
+  font-size: var(--font-size-footer);
+  font-weight: var(
+    --font-weight-semibold
+  );
+  font-family: var(--font-family-body);
+  list-style-type: none;
+}
+
+.body {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 25px;
+}
