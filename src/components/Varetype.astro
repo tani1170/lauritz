@@ -4,16 +4,18 @@ import Checkbox from "./Checkbox.astro";
 ---
 
 <article>
-  <p class="cardtitle">Auktion</p>
+  <p class="cardtitle">Varetype</p>
   <div>
-    <Checkbox beskrivelse="Aktive" />
-    <Checkbox beskrivelse="Nye" />
     <Checkbox
-      beskrivelse="Afsluttede"
+      beskrivelse="Alle varer"
     />
+    <Checkbox beskrivelse="Brugte" />
+    <Checkbox
+      beskrivelse="Nyproducerede"
+    />
+    <Checkbox beskrivelse="deLuxe" />
   </div>
 </article>
-
 <style>
   article {
     border-radius: var(--radius-medium);
@@ -28,8 +30,9 @@ import Checkbox from "./Checkbox.astro";
     background-color: var(--color-card);
     width: 17rem;
   }
+
   div {
-    display: flex;
-    gap: 15px;
+    display: grid;
+    gap: 5px;
   }
 </style>

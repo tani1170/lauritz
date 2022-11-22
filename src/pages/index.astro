@@ -3,6 +3,9 @@ import AuktionFilter from "../components/Auktion-filter.astro";
 import Checkbox from "../components/Checkbox.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import KategoriFilter from "../components/Kategori-filter.astro";
+import ShowroomFilter from "../components/Showroom-filter.astro";
+import Varetype from "../components/Varetype.astro";
 import "../styles/style.css";
 ---
 
@@ -23,17 +26,21 @@ import "../styles/style.css";
   <body>
     <Header />
     <section class="section">
+      <KategoriFilter />
       <AuktionFilter />
+      <Varetype />
+      <ShowroomFilter />
+      <!-- indhold -->
     </section>
-    <!-- indhold -->
-
     <Footer />
   </body>
-</html>
 
-<style>
-  body {
-    margin: 0%;
-    background-color: var(--color-body);
-  }
-</style>
+  <style>
+    body {
+      margin: 0%;
+      background-color: var(
+        --color-body
+      );
+    }
+  </style>
+</html>
