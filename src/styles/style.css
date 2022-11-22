@@ -12,6 +12,7 @@
   --color-dark-green: #13663a;
   --color-dark-red: #9f2020;
   --color-dark-grey: #3d3d3d;
+  --color-footer-background: #2b2b2b;
 
   /* radius */
   --radius-round: 100%;
@@ -46,6 +47,9 @@
   --font-weight-regular: 400;
 
   /* Aliasser */
+  --color-footer: var(
+    --color-footer-background
+  );
   --color-header: var(
     --color-header-background
   );
@@ -208,6 +212,15 @@
     --font-weight-semibold
   );
   font-family: var(--font-family-body);
+  color: var(--color-body);
+}
+.footer-2 {
+  font-size: var(--font-size-footer);
+  font-weight: var(
+    --font-weight-regular
+  );
+  font-family: var(--font-family-body);
+  color: var(--color-body);
 }
 
 .overskrift {
@@ -231,8 +244,15 @@
   list-style-type: none;
 }
 
-.body {
+.section {
   margin-left: 150px;
   margin-right: 150px;
-  margin-top: 25px;
+}
+
+.header {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: var(--color-header);
 }

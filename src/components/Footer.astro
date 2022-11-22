@@ -1,0 +1,113 @@
+---
+import "../styles/style.css";
+---
+
+<article>
+  <footer class="footer-size">
+    <div class="top footer">
+      <img
+        class="logo"
+        src="public/img/lauritz-logo-white.svg"
+        alt=""
+      />
+      <div class="content">
+        <a href="">Auktionshuse</a>
+        <a href="">Investor Relations</a
+        >
+        <a href="">Presserum</a>
+        <a href="">Bliv partner</a>
+      </div>
+      <div class="content">
+        <a href=""
+          >Sælg på Lauritz.com</a
+        >
+        <a href="">Online vurdering</a>
+        <a href="">Indlevering</a>
+        <a href="">Levering</a>
+      </div>
+      <div class="content">
+        <a href="">Persondatapolitik</a>
+        <a href="">Køb</a>
+        <a href="">Spørgsmål og svar</a>
+        <a href="">Gavekort</a>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="icons">
+        <img
+          class="icon"
+          src="public/img/appstore-white.png"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="public/img/googleplay-white.png"
+          alt=""
+        />
+      </div>
+
+      <div class="footer-2 content-2">
+        <p>
+          Brud af dette website
+          forudsætter accept af
+          aftalerne om købs- og
+          salgsvilkår samt
+          persondatapolitik.
+        </p>
+        <p>© Lauritz.com 2004-2022</p>
+      </div>
+    </div>
+  </footer>
+</article>
+
+<style>
+  .logo {
+    width: 15%;
+    padding-bottom: 70px;
+  }
+  .icon {
+    width: 20%;
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icons {
+    display: flex;
+    place-content: center;
+    gap: 50px;
+  }
+  .bottom {
+    margin-top: 40px;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+  }
+
+  .content {
+    display: grid;
+    gap: 15px;
+  }
+
+  .content-2 {
+    padding-top: 10px;
+    display: grid;
+    justify-items: center;
+  }
+  a {
+    text-decoration: none;
+    color: var(--color-body);
+  }
+
+  .footer-size {
+    padding-top: 40px;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 20px;
+    background-color: var(
+      --color-footer
+    );
+  }
+</style>

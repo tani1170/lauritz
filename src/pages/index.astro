@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../styles/style.css";
 ---
@@ -17,7 +18,18 @@ import "../styles/style.css";
     />
     <title>Lauritz</title>
   </head>
-  <body class="body">
+  <body>
     <Header />
+
+    <!-- indhold -->
+
+    <Footer />
   </body>
 </html>
+
+<style>
+  body {
+    margin: 0%;
+    background-color: var(--color-body);
+  }
+</style>
