@@ -4,7 +4,11 @@
   --color-filter-text: #909090;
   --color-check-box: #0330ce;
   --color-background-body: #ededed;
-  --color-card-background: #0000;
+  --color-card-background: rgb(
+    255,
+    255,
+    255
+  );
   --color-header-background: #f8f8f8;
   --color-varetype1: #d8c9f0;
   --color-varetype2: #f0ecc9;
@@ -19,7 +23,7 @@
   --radius-medium: 5px;
 
   /* shadow */
-  --shadow-level-1: 0px 4px 4px
+  --shadow-level-1: 0px 3px 3px 0px
     rgba(0, 0, 0, 0.25);
 
   /* Font */
@@ -47,6 +51,9 @@
   --font-weight-regular: 400;
 
   /* Aliasser */
+
+  --shadow-card: var(--shadow-level-1);
+
   --color-footer: var(
     --color-footer-background
   );
