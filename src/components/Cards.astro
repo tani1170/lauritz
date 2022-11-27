@@ -1,0 +1,31 @@
+---
+import "../styles/style.css";
+import Cardliste from "../components/Cardliste.astro";
+import Cardgallery from "../components/Cardgallery.astro";
+---
+
+<article>
+  <div class="scrolling-wrapper"></div>
+</article>
+
+<style>
+  article {
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-card);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    background-color: var(--color-card);
+  }
+
+  .scrolling-wrapper {
+    width: 17rem;
+    height: 17rem;
+    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+</style>

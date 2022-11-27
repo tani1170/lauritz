@@ -5,8 +5,11 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import KategoriFilter from "../components/Kategori-filter.astro";
 import ShowroomFilter from "../components/Showroom-filter.astro";
+import ListeGallery from "../components/Listegallery.astro";
 import Varetype from "../components/Varetype.astro";
 import "../styles/style.css";
+import Cardliste from "../components/Cardliste.astro";
+import Cardgallery from "../components/Cardgallery.astro";
 ---
 
 <!DOCTYPE html>
@@ -26,21 +29,375 @@ import "../styles/style.css";
   <body>
     <Header />
     <section class="section">
-      <KategoriFilter />
-      <AuktionFilter />
-      <Varetype />
-      <ShowroomFilter />
-      <!-- indhold -->
+      <div class="filtrering">
+        <KategoriFilter />
+        <AuktionFilter />
+        <Varetype />
+        <ShowroomFilter />
+      </div>
+
+      <div>
+        <ListeGallery />
+        <div class="cards">
+          <!-- Card 1 -->
+          <Cardliste
+            nyprodukt={false}
+            deluxe={false}
+            variant=""
+            titel="Kæmpe sølv ring af 68 kt guld"
+            beskrivelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+            lokation="Kolding, DK"
+            tid="12D 4T 17Mm"
+            vpris="4000"
+            nbpris="2500"
+            variantstatus=""
+            losing={false}
+            lead={false}
+            varianttimer="defaulttimer"
+            timer={true}
+            vurdering={true}
+            hammerslag={false}
+            mindstepris={false}
+            overbudt={false}
+            variantend=""
+            kobnu={false}
+            variantkob=""
+            kobnupris="2000"
+          />
+
+          <!-- Card 2 -->
+          <Cardliste
+            nyprodukt={true}
+            deluxe={false}
+            variant="nyproduktvare"
+            titel="Kæmpe sølv ring af 68 kt guld"
+            beskrivelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+            lokation="Aalborg, DK"
+            tid="2D 1T 4M"
+            vpris="14000"
+            nbpris="4500"
+            variantstatus=""
+            losing={false}
+            lead={false}
+            varianttimer="defaulttimer"
+            vurdering={false}
+            hammerslag={false}
+            mindstepris={false}
+            overbudt={true}
+            variantend="overbudt"
+            kobnu={true}
+            variantkob="aktiv"
+            kobnupris="9000"
+          />
+
+          <!-- Card 3 -->
+          <Cardliste
+            nyprodukt={false}
+            deluxe={true}
+            variant="deluxevare"
+            titel="Kæmpe sølv ring af 68 kt guld"
+            beskrivelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+            lokation="Odense, DK"
+            tid="0m"
+            vpris="4000"
+            nbpris="3500"
+            variantstatus=""
+            losing={false}
+            lead={false}
+            varianttimer=""
+            vurdering={false}
+            hammerslag={false}
+            mindstepris={true}
+            overbudt={false}
+            variantend="mindstepris"
+            kobnu={false}
+            variantkob=""
+            kobnupris="2000"
+          />
+
+          <!-- Card 4 -->
+          <Cardliste
+            nyprodukt={true}
+            deluxe={false}
+            variant="nyproduktvare"
+            titel="Kæmpe sølv ring af 68 kt guld"
+            beskrivelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+            lokation="Nivå, DK"
+            tid="0m"
+            vpris="4000"
+            nbpris="2500"
+            variantstatus=""
+            losing={false}
+            lead={false}
+            varianttimer="defaulttimer"
+            timer={false}
+            vurdering={false}
+            hammerslag={true}
+            mindstepris={false}
+            overbudt={false}
+            variantend="hammerslag"
+            kobnu={false}
+            variantkob=""
+            kobnupris="2000"
+          />
+
+          <!-- Card 5 -->
+          <Cardliste
+            nyprodukt={false}
+            deluxe={true}
+            variant="deluxevare"
+            titel="Mulberry taske model Bryn"
+            beskrivelse="Mulberry. Skuldertaske, model Bryn Natural Veg Tan, udført i brun læder, indvendigt med to mindre lommer en med lynlås. Monteret med justerbar skulderrem. Minimale brugsspor. H. 20 cm, B. 29 cm, D. 9 cm. Dustbag medfølger. Købt hos Mulberry i 2013. Fremstår med minimale brugsspor."
+            lokation="Herlev, DK"
+            tid="2m"
+            vpris="4000"
+            nbpris="12500"
+            variantstatus="losing"
+            losing={true}
+            lead={false}
+            varianttimer="redtimer"
+            vurdering={true}
+            hammerslag={false}
+            mindstepris={false}
+            overbudt={false}
+            variantend=""
+            kobnu={true}
+            variantkob="aktiv"
+            kobnupris="10000"
+          />
+
+          <!-- Card 6 -->
+          <Cardliste
+            nyprodukt={false}
+            deluxe={false}
+            variant=""
+            titel="Kinesisk vase gourd form"
+            beskrivelse="Kinesisk vase gourd form, grøn glasur H. 19 cm. Fremstår med glasurfejl ved fodrand."
+            lokation="Roskilde, DK"
+            tid="40m"
+            vpris="4000"
+            nbpris="3000"
+            variantstatus="lead"
+            losing={false}
+            lead={true}
+            varianttimer="defaulttimer"
+            timer={false}
+            vurdering={true}
+            hammerslag={false}
+            mindstepris={false}
+            overbudt={false}
+            variantend="vurdering"
+            kobnu={true}
+            variantkob="aktiv"
+            kobnupris="2000"
+          />
+
+          <!-- GALLERY CARDS -->
+
+          <div class="seperation">
+            <p class="overskrift">
+              HERUNDER VISES CARD I
+              GALLERYVIEW
+            </p>
+          </div>
+
+          <div class="gallery">
+            <!-- Card 1 -->
+            <Cardgallery
+              nyprodukt={false}
+              deluxe={false}
+              variant=""
+              titel="Kæmpe sølv ring af 68 kt guld"
+              beskrivelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+              lokation="Odense, DK"
+              tid="12D 4T 17Mm"
+              vpris="4000"
+              nbpris="2500"
+              variantstatus=""
+              losing={false}
+              lead={false}
+              varianttimer="defaulttimer"
+              timer={true}
+              vurdering={true}
+              hammerslag={false}
+              mindstepris={false}
+              overbudt={false}
+              variantend=""
+              kobnu={false}
+              variantkob=""
+              kobnupris="2000"
+            />
+
+            <!-- Card 2 -->
+            <Cardgallery
+              nyprodukt={true}
+              deluxe={false}
+              variant="nyproduktvare"
+              titel="Kæmpe sølv ring af 68 kt guld"
+              beskrivelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+              lokation="Herlev, DK"
+              tid="2D 1T 4M"
+              vpris="14000"
+              nbpris="4500"
+              variantstatus=""
+              losing={false}
+              lead={false}
+              varianttimer="defaulttimer"
+              vurdering={false}
+              hammerslag={false}
+              mindstepris={false}
+              overbudt={true}
+              variantend="overbudt"
+              kobnu={true}
+              variantkob="aktiv"
+              kobnupris="9000"
+            />
+
+            <!-- Card 3 -->
+            <Cardgallery
+              nyprodukt={false}
+              deluxe={true}
+              variant="deluxevare"
+              titel="Kæmpe sølv ring af 68 kt guld"
+              beskrivelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+              lokation="Herlev, DK"
+              tid="0m"
+              vpris="4000"
+              nbpris="3500"
+              variantstatus=""
+              losing={false}
+              lead={false}
+              varianttimer=""
+              vurdering={false}
+              hammerslag={false}
+              mindstepris={true}
+              overbudt={false}
+              variantend="mindstepris"
+              kobnu={false}
+              variantkob=""
+              kobnupris="2000"
+            />
+
+            <!-- Card 4 -->
+            <Cardgallery
+              nyprodukt={true}
+              deluxe={false}
+              variant="nyproduktvare"
+              titel="Kæmpe sølv ring af 68 kt guld"
+              beskrivelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+              lokation="Roskilde, DK"
+              tid="0m"
+              vpris="4000"
+              nbpris="2500"
+              variantstatus=""
+              losing={false}
+              lead={false}
+              varianttimer="defaulttimer"
+              timer={false}
+              vurdering={false}
+              hammerslag={true}
+              mindstepris={false}
+              overbudt={false}
+              variantend="hammerslag"
+              kobnu={false}
+              variantkob=""
+              kobnupris="2000"
+            />
+
+            <!-- Card 5 -->
+            <Cardgallery
+              nyprodukt={false}
+              deluxe={true}
+              variant="deluxevare"
+              titel="Mulberry taske model Bryn"
+              beskrivelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+              lokation="Nivå, DK"
+              tid="2m"
+              vpris="4000"
+              nbpris="12500"
+              variantstatus="losing"
+              losing={true}
+              lead={false}
+              varianttimer="redtimer"
+              vurdering={true}
+              hammerslag={false}
+              mindstepris={false}
+              overbudt={false}
+              variantend=""
+              kobnu={true}
+              variantkob="aktiv"
+              kobnupris="10000"
+            />
+
+            <!-- Card 6 -->
+            <Cardgallery
+              nyprodukt={false}
+              deluxe={false}
+              variant=""
+              titel="Kinesisk vase gourd form"
+              beskrivelse="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+              lokation="Aarhus, DK"
+              tid="40m"
+              vpris="4000"
+              nbpris="3000"
+              variantstatus="lead"
+              losing={false}
+              lead={true}
+              varianttimer="defaulttimer"
+              timer={false}
+              vurdering={true}
+              hammerslag={false}
+              mindstepris={false}
+              overbudt={false}
+              variantend="vurdering"
+              kobnu={true}
+              variantkob="aktiv"
+              kobnupris="2000"
+            />
+          </div>
+        </div>
+      </div>
     </section>
     <Footer />
   </body>
 
   <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      object-fit: contain;
+      max-height: 50%;
+      gap: 20px;
+      border-radius: var(
+        --radius-medium
+      );
+    }
+
+    .seperation {
+      display: flex;
+      justify-content: center;
+    }
     body {
       margin: 0%;
       background-color: var(
         --color-body
       );
+      display: block;
+    }
+
+    .cards {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+      background-color: var(
+        --color-card
+      );
+      border-radius: var(
+        --radius-medium
+      );
+    }
+    .filtrering {
+      padding-top: 90px;
     }
   </style>
 </html>

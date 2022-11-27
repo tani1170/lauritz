@@ -1,0 +1,38 @@
+---
+import "../styles/style.css";
+---
+
+<article>
+  <div>
+    <img src="/img/liste.png" alt="" />
+    <p class="listegallery">Liste</p>
+  </div>
+  <div>
+    <img
+      src="/img/galleri.png"
+      alt=""
+    />
+    <p class="listegallery">Galleri</p>
+  </div>
+</article>
+
+<style>
+  article {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  div {
+    display: flex;
+    height: 20px;
+    gap: 10px;
+    padding: 10px;
+    background-color: var(
+      --color-filter
+    );
+    border-radius: var(--radius-medium);
+  }
+</style>

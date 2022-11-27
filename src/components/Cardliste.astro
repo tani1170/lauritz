@@ -1,0 +1,331 @@
+---
+import "../styles/style.css";
+const {
+  titel,
+  beskrivelse,
+  lokation,
+  img,
+  tid,
+  vpris,
+  nbpris,
+kobnu,
+  deluxe,
+  variant,
+  variantstatus,
+  varianttimer,
+  variantend,
+  variantkob,
+  vurdering,
+  hammerslag,
+  overbudt,
+  mindstepris,
+  lead,
+  losing,
+  nyprodukt,
+  kobnupris,
+} = Astro.props;
+---
+
+<article
+  
+>
+  <div class="cardleft">
+    <div class="cardhead">
+      <!-- varetype + lokation -->
+      <div
+        data-variant={variant}
+        class="varetypelabel"
+      >
+        {
+          deluxe == true && (
+            <p class="varetype">
+              Deluxe
+            </p>
+          )
+        }
+
+        {
+          nyprodukt == true && (
+            <p class="varetype">
+              Nyproduceret
+            </p>
+          )
+        }
+      </div>
+
+      <!-- lokation + icon -->
+      <div class="lokationlabel">
+        <img src="" alt="" />
+        <p class="location">
+          {lokation}
+        </p>
+      </div>
+    </div>
+
+    <div class="cardindhold">
+      <!-- produkt titel + beskrivelse -->
+      <div class="description">
+        <p class="cardtitle">{titel}</p>
+        <p class="body">
+          {beskrivelse}
+        </p>
+      </div>
+
+      <!-- tid + vurderings- og næstebus pris -->
+      <div class="cardfooter">
+        <div class="timestatus">
+          <div
+            data-variant={variantstatus}
+            class="leadlosing"
+          >
+            {
+              losing == true && (
+                <p class="cardstatus">
+                  Du er blevet overbudt
+                </p>
+              )
+            }
+            {
+              lead == true && (
+                <p class="cardstatus">
+                  Du er førende
+                </p>
+              )
+            }
+          </div>
+          
+          <p
+            class="time cardtime"
+            data-variant={varianttimer}
+          >
+            {tid}
+          </p>
+        </div>
+
+        
+        <div class="priser">
+          <div
+            class="vurderinglabel"
+            data-variant={variantend}
+          >
+            {
+              overbudt == true && (
+                <p class="cardstatus">
+                  Du er blevet overbudt
+                </p>
+              )
+            }
+            {
+              hammerslag == true && (
+                <p class="cardstatus">
+                  Du har fået hammerslag
+                </p>
+              )
+            }
+            {
+              mindstepris == true && (
+                <p class="cardstatus">
+                  Mindste pris er ikke
+                  nået
+                </p>
+              )
+            }
+            {
+              vurdering == true && (
+                <>
+                  <p class="pricetitle">
+                    Vurdering
+                  </p>
+                  <p class="vurdering">
+                    {vpris}
+                    <span>DKK</span>
+                  </p>
+                </>
+              )
+            }
+          </div>
+
+
+          <div class="budlabel">
+            <p class="pricetitle">
+              Næste bud
+            </p>
+            <p class="neastebud">
+              {nbpris}
+              <span>DKK</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Køb nu + produkt billede -->
+  <div class="produktimg">
+    <img
+      src="https://unsplash.it/400/260"
+    />
+    <div class="kob"  data-variant={variantkob}>
+        {
+            kobnu == true && (
+            <p class="buynow">KØB NU</p>
+        <p class="body">
+          {kobnupris}
+        </p>
+        <p class="body">DKK</p>
+            )
+          }
+       
+      </div>
+  </div>
+
+  
+</article>
+
+<style>
+  article {
+    background-color: var(--color-card);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-card);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    /* display: flex;
+    flex-direction: column-reverse;
+    max-width: ; */
+  }
+  .kob {
+    position: absolute;
+    /* background-color: var(
+      --color-buynow
+    ); */
+    color: var(--color-background-body);
+    display: flex;
+    gap: 10px;
+    border-radius: var(--radius-medium);
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    right: 110px;
+  }
+
+  .kob p {
+    margin: 0%;
+  }
+  .leadlosing {
+    padding: 10px;
+    border-radius: var(--radius-medium);
+  }
+  .timestatus {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .produktimg {
+    object-fit: cover;
+    display: flex;
+    place-content: end;
+  }
+  .priser {
+    display: grid;
+    gap: 10px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+  }
+
+  .description {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10;
+  }
+  .vurderinglabel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    place-content: end;
+  }
+  .cardfooter {
+    display: flex;
+    justify-content: space-between;
+  }
+  .budlabel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .time {
+    display: grid;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10;
+  }
+
+  .cardhead {
+    display: flex;
+    justify-content: space-between;
+  }
+  .varetypelabel {
+    display: flex;
+    justify-content: center;
+    border-radius: var(--radius-medium);
+  }
+  .lokationlabel {
+    padding-right: 10px;
+  }
+  .cardindhold {
+    display: grid;
+  }
+
+
+
+  /* ----- THEMES ----- */
+  [data-variant="deluxevare"] {
+    background: var(--color-deluxe);
+  }
+
+  [data-variant="nyproduktvare"] {
+    background: var(
+      --color-nyproduceret
+    );
+  }
+
+  [data-variant="lead"] {
+    background: var(--color-lead);
+    color: var(--color-background-body);
+  }
+
+  [data-variant="losing"] {
+    background: var(--color-losing);
+    color: var(--color-background-body);
+  }
+
+  [data-variant="redtimer"] {
+    color: var(--color-status-timer);
+  }
+  [data-variant="defaulttimer"] {
+    color: var(--color-footer);
+  }
+
+  [data-variant="overbudt"] {
+    color: var(--color-losing);
+  }
+  [data-variant="pricetitle"] {
+    color: var(--color-vurdering);
+  }
+  [data-variant="hammerslag"] {
+    color: var(--color-lead);
+  }
+  [data-variant="mindstepris"] {
+    color: var(--color-losing);
+  }
+
+
+  [data-variant="aktiv"] {
+    background-color: var(--color-buynow);
+  }
+</style>
